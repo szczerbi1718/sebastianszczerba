@@ -14,7 +14,7 @@ SECRET_KEY = '=6hi72=m6p(yrjpp%vh7d@#%tydeg94^r^k(r*##-1&)zk-9vf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -30,6 +30,9 @@ INSTALLED_APPS = [
     #Local
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+
+
+
 ]
 
 MIDDLEWARE = [
@@ -124,3 +127,4 @@ STATICFILES_FINDERS = [
 AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends '_base.html' %}
+
+
+{% block title %}Wyloguj Sie{% endblock title %}
+
+{% block content %}
+<div class="container">
+<h2>Wyloguj Sie</h2>
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" >Wyloguj sie</button>
+    </form>
+</div>
+{% endblock content %}
